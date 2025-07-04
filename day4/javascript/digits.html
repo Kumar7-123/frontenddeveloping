@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <script>
+            function largestDigit()
+            {
+                var num=parseInt(document.getElementById("txtNumber").value);
+                ld=0;
+                while(num>0){
+                    rem=num%10;
+                    if(rem>ld)ld=rem;
+                    num=Math.floor(num/10)
+                }
+                document.getElementById("txtAns").value=ld;
+
+            }
+            function reverseOfDigit()
+            {
+                var num=parseInt(document.getElementById("txtNumber").value);
+                ld=0;
+                while(num>0){
+                    rem=num%10;
+                    ld=rem+(10*ld);
+                    num=Math.floor(num/10)
+                }
+                document.getElementById("txtAns").value=ld;
+
+            }
+            function sumDigit()
+            {
+                var num=parseInt(document.getElementById("txtNumber").value);
+                ld=0;
+                while(num>0){
+                    rem=num%10;
+                    ld=rem+ld;
+                    num=Math.floor(num/10);   
+                }
+                Math.floor(num/10)
+                document.getElementById("txtAns").value=ld;
+
+            }
+            function smallestDigit()
+            {
+                var num=parseInt(document.getElementById("txtNumber").value);
+                ld=9;
+                while(num>0){
+                    rem=num%10;
+                    if(rem<ld)ld=rem;
+                    num=Math.floor(num/10)
+                }
+                document.getElementById("txtAns").value=ld;
+
+            }
+            
+        </script>
+       
+        
+            <link rel="stylesheet" type="text/css" href="digits.css"> 
+        
+    </head>
+    <body>
+        <p>enter a number:<input id="txtNumber"></p>
+        <button onclick="sumDigit()">SumDigits</button>
+        <button onclick="largestDigit()">LargestDigits</button>
+        <button onclick="smallestDigit()">SmallestDigits</button>
+        <button onclick="reverseOfDigit()">ReverseOfDigits</button>
+        <p>Sum of digits :<input id ="txtAns"></p>
+        
+
+    </body>
+</html>
