@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script type=text/javascript>
+        function pT()
+        {
+          var number=parseInt(document.getElementById("txtNumber").value);
+          var i=0
+          for( i=0;i<=10;i++)
+          {
+            document.write(number+"*"+i+"="+number*i);
+            document.write("<br/>");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>enter a number:<input id ="txtNumber"></p>
+    <button onclick="pT()">table</button>
+  </body>
+</html>
