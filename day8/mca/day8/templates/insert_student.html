@@ -1,0 +1,11 @@
+
+<html>
+<head></head>
+<body>
+<form method="POST"   action="{% url 'insert_student' %}" >
+    {% csrf_token %}<!-- Security token -->
+    {{ form.as_p }}<!-- Using the formset -->
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
